@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://tqicn2rmaf0s"]
+
+[ext_resource type="Script" path="res://scenes/hazards/base_hazard.gd" id="1_126rc"]
+
+[node name="Hazard" type="CharacterBody2D"]
+scale = Vector2(1.15, 1.15)
+script = ExtResource("1_126rc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

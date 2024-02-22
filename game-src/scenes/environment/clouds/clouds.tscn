@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ll2ljfri1nsi"]
+
+[ext_resource type="Script" path="res://scenes/environment/clouds/clouds.gd" id="1_ia4pw"]
+[ext_resource type="PackedScene" uid="uid://chcxmlo4jgur8" path="res://scenes/environment/clouds/cloud_sprite.tscn" id="2_30uv2"]
+
+[node name="Clouds" type="Node2D"]
+script = ExtResource("1_ia4pw")
+cloud_sprite = ExtResource("2_30uv2")
