@@ -16,7 +16,6 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	duration += delta
-	print(roundf(duration))
 	
 func randomize_spawn_point() -> Vector2:
 	var spawn_point: Vector2 = Vector2.ZERO

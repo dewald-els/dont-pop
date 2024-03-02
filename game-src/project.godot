@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerTracker="*res://autoloaders/player_tracker.gd"
 SignalBus="*res://autoloaders/signal_bus.gd"
 ScoreKeeper="*res://autoloaders/score_keeper.gd"
+SfxPlayer="*res://autoloaders/audio/sfx_player.tscn"
 
 [display]
 

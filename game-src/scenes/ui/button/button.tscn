@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://olkhhamwm1pr"]
+[gd_scene load_steps=7 format=3 uid="uid://olkhhamwm1pr"]
 
 [ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="1_hsc2t"]
 [ext_resource type="StyleBox" uid="uid://dabaj3dfo2bt7" path="res://scenes/ui/button/orange_button.tres" id="2_yjefg"]
+[ext_resource type="AudioStream" uid="uid://bdgwoykvrd0gm" path="res://scenes/ui/button/sounds/click.wav" id="3_gtujj"]
+[ext_resource type="Script" path="res://scenes/ui/button/button.gd" id="3_yvkf1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4js6h"]
 bg_color = Color(0.898039, 0.623529, 0.533333, 1)
@@ -26,3 +28,8 @@ theme_override_styles/normal = ExtResource("2_yjefg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4js6h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j24te")
 text = "Play"
+script = ExtResource("3_yvkf1")
+
+[node name="SfxClick" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_gtujj")

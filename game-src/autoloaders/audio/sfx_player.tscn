@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpgs8wgvsv7sm"]
+
+[ext_resource type="Script" path="res://autoloaders/audio/sfx_player.gd" id="1_1imgy"]
+
+[node name="SfxPlayer" type="Node"]
+script = ExtResource("1_1imgy")
+
+[node name="StreamPlayer_001" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
+[node name="StreamPlayer_002" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
