@@ -21,6 +21,7 @@ PlayerTracker="*res://autoloaders/player_tracker.gd"
 SignalBus="*res://autoloaders/signal_bus.gd"
 ScoreKeeper="*res://autoloaders/score_keeper.gd"
 SfxPlayer="*res://autoloaders/audio/sfx_player.tscn"
+MusicPlayer="*res://autoloaders/audio/music_player.tscn"
 
 [display]
 

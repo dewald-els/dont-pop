@@ -6,9 +6,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicPlayer.play_died_song()
 	try_again_button.connect("did_press", on_try_again_pressed)
 	quit_button.connect("did_press", on_quit_pressed)
-	
 	score_label.text = "You scored " + str(ScoreKeeper.score)
 	
 
