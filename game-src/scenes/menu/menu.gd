@@ -12,9 +12,9 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		start_game()
+		play_button.emit_signal("pressed")
 	elif event.is_action_pressed("ui_cancel"):
-		quit_game()
+		quit_button.emit_signal("pressed")
 
 func quit_game() -> void:
 	get_tree().quit()

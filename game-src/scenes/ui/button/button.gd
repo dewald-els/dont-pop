@@ -14,5 +14,6 @@ func _ready() -> void:
 
 func on_pressed() -> void:
 	SfxPlayer.play_sfx(click_stream, "UI_SFX")
+	await get_tree().create_timer(0.15).timeout
 	emit_signal("did_press")
 	
