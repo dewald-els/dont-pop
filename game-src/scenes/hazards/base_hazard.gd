@@ -5,6 +5,7 @@ const ROTATION_SPEED: float = 5.0
 
 
 @onready var hazard_area: Area2D = $Area2D
+@onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
 
 
 var target_position: Vector2
@@ -23,6 +24,8 @@ func _ready() -> void:
 	direction = target_position - global_position
 	
 	get_tree().create_timer(5.0).connect("timeout", on_destroy)
+	
+	sfx_throw.play()
 
 		
 func _physics_process(delta: float) -> void:

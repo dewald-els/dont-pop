@@ -1,6 +1,6 @@
 extends Node
 
-
+@onready var score_label: Label = %ScoreLabel
 @onready var try_again_button: Button = %TryAgainButton
 @onready var quit_button: Button = %QuitButton
 
@@ -8,6 +8,8 @@ extends Node
 func _ready() -> void:
 	try_again_button.connect("pressed", on_try_again_pressed)
 	quit_button.connect("pressed", on_quit_pressed)
+	
+	score_label.text = "You scored " + str(ScoreKeeper.score)
 	
 
 func _unhandled_input(event: InputEvent) -> void:
