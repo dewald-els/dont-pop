@@ -24,12 +24,13 @@ border_color = Color(0.239216, 0.160784, 0.188235, 1)
 [node name="PlayButton" type="Button"]
 theme_override_fonts/font = ExtResource("1_hsc2t")
 theme_override_font_sizes/font_size = 5
-theme_override_styles/normal = ExtResource("2_yjefg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4js6h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j24te")
+theme_override_styles/normal = ExtResource("2_yjefg")
 text = "Play"
 script = ExtResource("3_yvkf1")
 
 [node name="SfxClick" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_gtujj")
+bus = &"Sfx"

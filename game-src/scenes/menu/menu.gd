@@ -7,15 +7,15 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	play_button.connect("did_press", start_game)
-	quit_button.connect("did_press", quit_game)
+	play_button.pressed.connect(start_game)
+	quit_button.pressed.connect(quit_game)
 	MusicPlayer.play_game_song()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		play_button.emit_signal("pressed")
+		play_button.pressed.emit()
 	elif event.is_action_pressed("ui_cancel"):
-		quit_button.emit_signal("pressed")
+		quit_button.pressed.emit()
 
 func quit_game() -> void:
 	get_tree().quit()

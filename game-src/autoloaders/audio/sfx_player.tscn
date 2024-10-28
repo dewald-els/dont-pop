@@ -7,6 +7,8 @@ script = ExtResource("1_1imgy")
 
 [node name="StreamPlayer_001" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+bus = &"Sfx"
 
 [node name="StreamPlayer_002" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+bus = &"Sfx"

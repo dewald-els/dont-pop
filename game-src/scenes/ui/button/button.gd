@@ -8,12 +8,12 @@ signal did_press
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("pressed", on_pressed)
+	pressed.connect(on_pressed)
 	click_stream = load("res://scenes/ui/button/sounds/click.wav")
 
 
 func on_pressed() -> void:
 	SfxPlayer.play_sfx(click_stream, "UI_SFX")
 	await get_tree().create_timer(0.15).timeout
-	emit_signal("did_press")
+	did_press.emit()
 	

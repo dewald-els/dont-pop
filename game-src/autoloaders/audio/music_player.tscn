@@ -11,3 +11,4 @@ died_stream = ExtResource("3_tw3v7")
 
 [node name="StreamPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+bus = &"Music"
