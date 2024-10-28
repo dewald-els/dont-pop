@@ -12,6 +12,7 @@ func _ready() -> void:
 	MusicPlayer.play_game_song()
 	score_timer.connect("timeout", on_score_timer_timeout)
 	ScoreKeeper.score = 0
+		
 
 
 func on_score_timer_timeout() -> void:

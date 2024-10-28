@@ -30,7 +30,7 @@ theme_override_styles/normal = ExtResource("2_yjefg")
 text = "Play"
 script = ExtResource("3_yvkf1")
 
-[node name="SfxClick" type="AudioStreamPlayer2D" parent="."]
-unique_name_in_owner = true
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_gtujj")
-bus = &"Sfx"
+volume_db = 13.0
+bus = &"SFX"

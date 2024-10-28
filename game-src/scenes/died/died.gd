@@ -1,14 +1,14 @@
 extends Node
 
 @onready var score_label: Label = %ScoreLabel
-@onready var try_again_button: Button = %TryAgainButton
-@onready var quit_button: Button = %QuitButton
+@onready var try_again_button: GameButton = %TryAgainButton
+@onready var quit_button: GameButton = %QuitButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicPlayer.play_died_song()
-	try_again_button.pressed.connect(on_try_again_pressed)
-	quit_button.pressed.connect(on_quit_pressed)
+	try_again_button.did_press.connect(on_try_again_pressed)
+	quit_button.did_press.connect(on_quit_pressed)
 	score_label.text = "You scored " + str(ScoreKeeper.score)
 	
 

@@ -1,14 +1,17 @@
 extends Node
 
 
-@onready var play_button: Button = %PlayButton
-@onready var quit_button: Button = %QuitButton
+@onready var play_button: GameButton = %PlayButton
+@onready var quit_button: GameButton = %QuitButton
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	play_button.pressed.connect(start_game)
-	quit_button.pressed.connect(quit_game)
+	if OS.get_name() == "Web":
+		quit_button.visible = false
+	
+	play_button.did_press.connect(start_game)
+	quit_button.did_press.connect(quit_game)
 	MusicPlayer.play_game_song()
 
 func _unhandled_input(event: InputEvent) -> void:

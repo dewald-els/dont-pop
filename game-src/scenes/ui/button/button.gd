@@ -1,19 +1,19 @@
+class_name GameButton
 extends Button
 
-@onready var sfx_click: AudioStreamPlayer2D = %SfxClick
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
-var click_stream: AudioStream
+#var click_stream: AudioStream
 
 signal did_press
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pressed.connect(on_pressed)
-	click_stream = load("res://scenes/ui/button/sounds/click.wav")
 
 
 func on_pressed() -> void:
-	SfxPlayer.play_sfx(click_stream, "UI_SFX")
+	audio_stream_player_2d.play()
 	await get_tree().create_timer(0.15).timeout
 	did_press.emit()
 	
