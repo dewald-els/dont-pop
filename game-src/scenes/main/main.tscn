@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl6llr4ffnreu"]
+[gd_scene load_steps=15 format=3 uid="uid://bl6llr4ffnreu"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_hd1vc"]
 [ext_resource type="PackedScene" uid="uid://du4y724ojgcem" path="res://scenes/player/player.tscn" id="1_nub53"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/main/tracker.gd" id="10_gh5k0"]
 [ext_resource type="PackedScene" uid="uid://ll2ljfri1nsi" path="res://scenes/environment/clouds/clouds.tscn" id="11_158hm"]
 [ext_resource type="Texture2D" uid="uid://dth04gc8nfx5y" path="res://scenes/environment/spikes/sprites/spike.png" id="13_kk3jm"]
+[ext_resource type="PackedScene" uid="uid://cwlhelf81ptdh" path="res://scenes/starting_screen/starting_screen.tscn" id="14_jc6xq"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_hd1vc")
@@ -647,3 +648,5 @@ texture = ExtResource("13_kk3jm")
 [node name="Spike27" type="Sprite2D" parent="SpikesLeft"]
 position = Vector2(186, 2)
 texture = ExtResource("13_kk3jm")
+
+[node name="StartingScreen" parent="." instance=ExtResource("14_jc6xq")]

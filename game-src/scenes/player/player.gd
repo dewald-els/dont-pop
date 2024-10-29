@@ -65,5 +65,13 @@ func check_out_of_bounds() -> void:
 func load_death_screen() -> void:
 	get_tree().change_scene_to_file("res://scenes/died/died.tscn")
 
+func load_enter_high_score() -> void:
+	get_tree().change_scene_to_file("res://scenes/enter_high_score_screen/enter_high_score_screen.tscn")
+	
+	
 func on_player_popped() -> void:
-	call_deferred("load_death_screen")
+	
+	if HighScoreManager.is_high_score(ScoreKeeper.score):
+		Callable(load_enter_high_score).call_deferred()
+	else:
+		Callable(load_death_screen).call_deferred()

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn1783r4sgmce"]
+
+[ext_resource type="Script" path="res://autoloaders/high_score_manager/high_score_manager.gd" id="1_rj4jn"]
+
+[node name="HighScoreManager" type="Node"]
+script = ExtResource("1_rj4jn")

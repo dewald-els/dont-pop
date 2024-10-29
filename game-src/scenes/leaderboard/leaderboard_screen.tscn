@@ -1,0 +1,113 @@
+[gd_scene load_steps=15 format=3 uid="uid://bdke05tma2o3u"]
+
+[ext_resource type="Script" path="res://scenes/leaderboard/leaderboard_screen.gd" id="1_7nasf"]
+[ext_resource type="Texture2D" uid="uid://c21ys13oh3bso" path="res://scenes/resources/tiles/sprite/tile.png" id="2_epc4p"]
+[ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="3_f80g5"]
+[ext_resource type="PackedScene" uid="uid://ll2ljfri1nsi" path="res://scenes/environment/clouds/clouds.tscn" id="4_6w3vv"]
+[ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="5_fmnrt"]
+[ext_resource type="PackedScene" uid="uid://olkhhamwm1pr" path="res://scenes/ui/button/button.tscn" id="6_vee5x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlobm"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(0, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvv8d"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(18, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbgov"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(36, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epbek"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(54, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yphyj"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(72, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kn0j"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(90, 0, 18, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6unb"]
+atlas = ExtResource("3_f80g5")
+region = Rect2(108, 0, 18, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtjck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlobm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvv8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbgov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yphyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kn0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6unb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="LeaderboardScreen" type="CanvasLayer"]
+script = ExtResource("1_7nasf")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(140.25, 89.25)
+scale = Vector2(9.73438, 6.54688)
+texture = ExtResource("2_epc4p")
+
+[node name="PlayerIdle" type="AnimatedSprite2D" parent="."]
+position = Vector2(46, 59)
+sprite_frames = SubResource("SpriteFrames_wtjck")
+autoplay = "default"
+
+[node name="Clouds" parent="." instance=ExtResource("4_6w3vv")]
+number_of_clouds = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_fmnrt")
+theme_override_font_sizes/font_size = 14
+text = "Leaderboard"
+horizontal_alignment = 1
+
+[node name="HighScoresContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BackButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("6_vee5x")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Go Back"

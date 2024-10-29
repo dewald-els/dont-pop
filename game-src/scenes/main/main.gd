@@ -10,7 +10,7 @@ var score: int = 0
 
 func _ready() -> void:
 	MusicPlayer.play_game_song()
-	score_timer.connect("timeout", on_score_timer_timeout)
+	score_timer.timeout.connect(on_score_timer_timeout)
 	ScoreKeeper.score = 0
 		
 

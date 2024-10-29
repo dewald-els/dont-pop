@@ -5,10 +5,10 @@
 [ext_resource type="AudioStream" uid="uid://bcmhg8cg54chf" path="res://scenes/died/sounds/died.wav" id="3_tw3v7"]
 
 [node name="MusicPlayer" type="Node"]
+process_mode = 3
 script = ExtResource("1_atyqt")
 game_song_stream = ExtResource("2_dfwdk")
 died_stream = ExtResource("3_tw3v7")
 
 [node name="StreamPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-bus = &"Music"

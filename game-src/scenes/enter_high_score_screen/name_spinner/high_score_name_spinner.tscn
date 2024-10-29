@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cesjt387n13kf"]
+
+[ext_resource type="Script" path="res://scenes/enter_high_score_screen/name_spinner/high_score_name_spinner.gd" id="1_i4d0o"]
+[ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="1_rjcue"]
+[ext_resource type="Texture2D" uid="uid://b1xtibc14hoi5" path="res://scenes/enter_high_score_screen/name_spinner/sprites/arrow.png" id="3_35vmm"]
+
+[node name="HighScoreNameSpinner" type="MarginContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_i4d0o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel1" type="Label" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_rjcue")
+theme_override_font_sizes/font_size = 18
+text = "_"
+
+[node name="TextureRect1" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_35vmm")
+stretch_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_rjcue")
+theme_override_font_sizes/font_size = 18
+text = "_"
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_35vmm")
+stretch_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel3" type="Label" parent="HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_rjcue")
+theme_override_font_sizes/font_size = 18
+text = "_"
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_35vmm")
+stretch_mode = 2

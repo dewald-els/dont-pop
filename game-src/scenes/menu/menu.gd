@@ -3,6 +3,7 @@ extends Node
 
 @onready var play_button: GameButton = %PlayButton
 @onready var quit_button: GameButton = %QuitButton
+@onready var high_scores_button: GameButton = %HighScoresButton
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +13,7 @@ func _ready() -> void:
 	
 	play_button.did_press.connect(start_game)
 	quit_button.did_press.connect(quit_game)
+	high_scores_button.did_press.connect(show_high_scores)
 	MusicPlayer.play_game_song()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -25,3 +27,6 @@ func quit_game() -> void:
 
 func start_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+
+func show_high_scores() -> void:
+	get_tree().change_scene_to_file("res://scenes/leaderboard/leaderboard_screen.tscn")
