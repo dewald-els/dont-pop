@@ -4,3 +4,9 @@
 
 [node name="HighScoreManager" type="Node"]
 script = ExtResource("1_rj4jn")
+
+[node name="SaveScoresRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[node name="GetScoresRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true

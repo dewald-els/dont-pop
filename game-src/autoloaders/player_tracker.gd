@@ -13,3 +13,6 @@ func get_last_position() -> Vector2:
 		return last_position
 		
 	return Vector2.ZERO
+
+func clear() -> void:
+	player_positions = []

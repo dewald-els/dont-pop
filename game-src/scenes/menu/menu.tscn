@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://btuoi486euiaa"]
+[gd_scene load_steps=17 format=3 uid="uid://btuoi486euiaa"]
 
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_4nlfh"]
 [ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="1_dix4e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ll2ljfri1nsi" path="res://scenes/environment/clouds/clouds.tscn" id="3_8jnt8"]
 [ext_resource type="PackedScene" uid="uid://olkhhamwm1pr" path="res://scenes/ui/button/button.tscn" id="4_13i7x"]
 [ext_resource type="StyleBox" uid="uid://s0glpx27rnqy" path="res://scenes/ui/button/red_button.tres" id="5_mv56i"]
+[ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="6_amk4x"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="7_4eof0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wlobm"]
@@ -74,9 +75,11 @@ scale = Vector2(9.73438, 6.54688)
 texture = ExtResource("2_gvn71")
 
 [node name="PlayerIdle" type="AnimatedSprite2D" parent="."]
-position = Vector2(73, 65)
+position = Vector2(59, 54)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_o605n")
 autoplay = "default"
+frame_progress = 0.502129
 
 [node name="Clouds" parent="." instance=ExtResource("3_8jnt8")]
 number_of_clouds = 8
@@ -96,11 +99,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_constants/separation = -1
+theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -109,6 +112,17 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_dix4e")
 theme_override_font_sizes/font_size = 12
 text = "Don't Pop"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_amk4x")
+theme_override_colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_dix4e")
+theme_override_font_sizes/font_size = 8
+text = "A game of dodge"
+horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2

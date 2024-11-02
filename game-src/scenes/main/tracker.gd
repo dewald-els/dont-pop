@@ -9,10 +9,13 @@ var player_positions: Array[Vector2]
 
 
 func _ready() -> void:
+	SignalBus.player_popped.connect(_on_player_pop)
 	player = get_tree().get_first_node_in_group("player")
 	tracker_timer.connect("timeout", on_timeout)
 	create_new_interval()
 	
+func _on_player_pop() -> void:
+	player_positions = []
 	
 func create_new_interval() -> void:
 	tracker_timer.wait_time = get_random_interval()
@@ -24,6 +27,9 @@ func get_random_interval() -> float:
 
 
 func on_timeout() -> void:
+	if not player:
+		return
+	
 	PlayerTracker.add(player.global_position)
 	create_new_interval()
 	

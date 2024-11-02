@@ -67,6 +67,7 @@ one_shot = true
 autostart = true
 
 [node name="Tracker" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("10_gh5k0")
 
 [node name="TrackerTimer" type="Timer" parent="Tracker"]

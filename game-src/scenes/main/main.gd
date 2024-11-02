@@ -9,10 +9,10 @@ var score: int = 0
 
 
 func _ready() -> void:
+	PlayerTracker.clear()
 	MusicPlayer.play_game_song()
 	score_timer.timeout.connect(on_score_timer_timeout)
 	ScoreKeeper.score = 0
-		
 
 
 func on_score_timer_timeout() -> void:

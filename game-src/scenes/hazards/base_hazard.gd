@@ -20,7 +20,7 @@ func _ready() -> void:
 		
 	hazard_area.connect("body_entered", on_body_entered)
 		
-	target_position = PlayerTracker.get_last_position()	
+	target_position = PlayerTracker.get_last_position()
 	direction = target_position - global_position
 	
 	get_tree().create_timer(5.0).connect("timeout", on_destroy)

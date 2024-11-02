@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://du4y724ojgcem"]
+[gd_scene load_steps=25 format=3 uid="uid://du4y724ojgcem"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_oyv21"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="2_qs4dp"]
+[ext_resource type="PackedScene" uid="uid://r7x2ugu834fl" path="res://scenes/player/player_death/player_death.tscn" id="2_sp5ny"]
 [ext_resource type="Texture2D" uid="uid://butsnj0v5sm43" path="res://scenes/player/sprites/move.png" id="3_sltux"]
 [ext_resource type="Texture2D" uid="uid://wooxglouac4o" path="res://scenes/player/sprites/pop.png" id="4_uvfv6"]
 
@@ -149,11 +150,12 @@ radius = 5.0
 z_index = 2
 motion_mode = 1
 script = ExtResource("1_oyv21")
+player_death = ExtResource("2_sp5ny")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_lhbr7")
-animation = &"idle"
+animation = &"pop"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

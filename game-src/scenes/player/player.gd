@@ -8,11 +8,13 @@ class_name Player extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite
 
+@export var player_death: PackedScene
+
 var is_dead: bool = false
 
 func _ready() -> void:
 	SignalBus.connect("player_popped", on_player_popped)
-
+	
 
 func _physics_process(_delta: float) -> void:
 	var movement_vector: Vector2 = get_input_vector()
@@ -48,7 +50,9 @@ func face_movement_direction(direction: float) -> void:
 
 
 func play_animation() -> void:
-	if velocity != Vector2.ZERO:
+	if is_dead:
+		animated_sprite.play("pop")
+	elif velocity != Vector2.ZERO:
 		animated_sprite.play("move")
 	else:
 		animated_sprite.play("idle")
@@ -61,17 +65,10 @@ func check_out_of_bounds() -> void:
 	   global_position.y < 12 or \
 	   global_position.y > viewport.y - 8:
 		SignalBus.emit_signal("player_popped")
-		
-func load_death_screen() -> void:
-	get_tree().change_scene_to_file("res://scenes/died/died.tscn")
-
-func load_enter_high_score() -> void:
-	get_tree().change_scene_to_file("res://scenes/enter_high_score_screen/enter_high_score_screen.tscn")
-	
+			
 	
 func on_player_popped() -> void:
-	
-	if HighScoreManager.is_high_score(ScoreKeeper.score):
-		Callable(load_enter_high_score).call_deferred()
-	else:
-		Callable(load_death_screen).call_deferred()
+	var death: PlayerDeath = player_death.instantiate()
+	get_tree().root.add_child(death)
+	death.global_position = global_position
+	queue_free()
