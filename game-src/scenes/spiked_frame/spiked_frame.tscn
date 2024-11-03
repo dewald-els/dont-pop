@@ -1,0 +1,579 @@
+[gd_scene load_steps=2 format=3 uid="uid://004srx1eu3sv"]
+
+[ext_resource type="Texture2D" uid="uid://dth04gc8nfx5y" path="res://scenes/environment/spikes/sprites/spike.png" id="1_jngwm"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="SpikesTop" type="Node2D" parent="."]
+
+[node name="Spike" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(4, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike42" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(-3, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike2" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(11, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike3" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(18, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike4" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(25, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike5" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(32, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike6" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(39, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike7" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(46, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike8" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(53, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike9" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(60, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike10" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(67, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike11" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(74, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike12" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(81, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike13" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(88, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike14" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(95, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike15" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(102, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike16" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(109, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike17" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(116, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike18" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(123, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike19" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(130, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike20" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(137, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike21" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(144, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike22" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(151, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike23" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(158, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike24" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(165, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike25" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(172, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike26" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(179, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike27" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(186, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike28" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(193, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike29" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(200, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike30" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(207, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike31" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(214, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike32" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(221, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike33" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(228, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike34" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(235, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike35" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(242, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike36" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(249, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike37" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(256, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike38" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(263, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike39" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(270, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike40" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(277, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike41" type="Sprite2D" parent="SpikesTop"]
+position = Vector2(277, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="SpikesBottom" type="Node2D" parent="."]
+position = Vector2(279, 180)
+rotation = 3.14159
+
+[node name="Spike" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(4, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike42" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(-3, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike2" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(11, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike3" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(18, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike4" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(25, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike5" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(32, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike6" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(39, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike7" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(46, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike8" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(53, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike9" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(60, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike10" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(67, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike11" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(74, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike12" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(81, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike13" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(88, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike14" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(95, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike15" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(102, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike16" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(109, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike17" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(116, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike18" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(123, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike19" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(130, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike20" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(137, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike21" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(144, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike22" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(151, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike23" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(158, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike24" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(165, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike25" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(172, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike26" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(179, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike27" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(186, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike28" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(193, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike29" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(200, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike30" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(207, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike31" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(214, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike32" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(221, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike33" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(228, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike34" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(235, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike35" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(242, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike36" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(249, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike37" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(256, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike38" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(263, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike39" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(270, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike40" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(277, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike41" type="Sprite2D" parent="SpikesBottom"]
+position = Vector2(277, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="SpikesRight" type="Node2D" parent="."]
+position = Vector2(280, -2.62658e-13)
+rotation = 1.5708
+
+[node name="Spike" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(4, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike42" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(-3, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike2" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(11, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike3" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(18, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike4" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(25, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike5" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(32, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike6" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(39, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike7" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(46, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike8" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(53, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike9" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(60, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike10" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(67, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike11" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(74, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike12" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(81, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike13" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(88, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike14" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(95, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike15" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(102, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike16" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(109, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike17" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(116, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike18" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(123, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike19" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(130, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike20" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(137, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike21" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(144, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike22" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(151, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike23" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(158, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike24" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(165, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike25" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(172, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike26" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(179, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike27" type="Sprite2D" parent="SpikesRight"]
+position = Vector2(186, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="SpikesLeft" type="Node2D" parent="."]
+position = Vector2(4.99809e-14, 180)
+rotation = -1.5708
+
+[node name="Spike" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(4, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike42" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(-3, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike2" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(11, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike3" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(18, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike4" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(25, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike5" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(32, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike6" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(39, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike7" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(46, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike8" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(53, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike9" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(60, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike10" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(67, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike11" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(74, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike12" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(81, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike13" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(88, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike14" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(95, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike15" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(102, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike16" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(109, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike17" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(116, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike18" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(123, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike19" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(130, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike20" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(137, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike21" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(144, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike22" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(151, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike23" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(158, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike24" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(165, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike25" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(172, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike26" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(179, 2)
+texture = ExtResource("1_jngwm")
+
+[node name="Spike27" type="Sprite2D" parent="SpikesLeft"]
+position = Vector2(186, 2)
+texture = ExtResource("1_jngwm")

@@ -4,15 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_t7rul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nutk"]
-size = Vector2(3, 8)
+size = Vector2(2.6087, 6.95652)
 
 [node name="Needle" instance=ExtResource("1_lt3ex")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.434783, 0)
 shape = SubResource("RectangleShape2D_0nutk")
 
 [node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_t7rul")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 21)
+
+[node name="SfxThrow" parent="." index="2"]
+bus = &"Master"
