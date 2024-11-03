@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_hpl2d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhovp"]
-radius = 5.21739
+radius = 4.34783
 
 [node name="Cactus" instance=ExtResource("1_j83ea")]
 
@@ -16,3 +16,6 @@ shape = SubResource("CircleShape2D_yhovp")
 texture = ExtResource("2_hpl2d")
 region_enabled = true
 region_rect = Rect2(64, 0, 16, 21)
+
+[node name="SfxThrow" parent="." index="2"]
+bus = &"Master"

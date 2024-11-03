@@ -54,7 +54,6 @@ autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_nub53")]
 position = Vector2(141, 85)
-move_speed = 105.0
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("3_cw6vf")

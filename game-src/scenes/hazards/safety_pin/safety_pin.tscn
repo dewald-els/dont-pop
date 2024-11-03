@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_ydr2s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1e3t"]
-radius = 5.0
+radius = 4.21739
 height = 16.0
 
 [node name="SafetyPin" instance=ExtResource("1_gp5cp")]
@@ -17,3 +17,6 @@ shape = SubResource("CapsuleShape2D_m1e3t")
 texture = ExtResource("2_ydr2s")
 region_enabled = true
 region_rect = Rect2(16, 0, 16, 21)
+
+[node name="SfxThrow" parent="." index="2"]
+bus = &"Master"
