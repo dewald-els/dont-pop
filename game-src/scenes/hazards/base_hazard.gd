@@ -36,7 +36,6 @@ func _physics_process(delta: float) -> void:
 
 
 func on_destroy() -> void:
-	print("Destory item")
 	queue_free()
 	
 func on_body_entered(body: Node2D) -> void:

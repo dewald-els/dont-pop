@@ -40,11 +40,10 @@ func _load_high_scores() -> void:
 		HTTPClient.Method.METHOD_GET
 	)
 
-func _on_get_scores_complete(_result, response_code, headers, body):
+func _on_get_scores_complete(_result, response_code, _headers, body):
 	if response_code == HTTPClient.ResponseCode.RESPONSE_OK:
 		var data = body.get_string_from_utf8()
 		var json = JSON.parse_string(data) as Array[Dictionary]
-		print("json: ", json[0])
 		
 		for score in json:
 			high_scores.append({
@@ -55,9 +54,6 @@ func _on_get_scores_complete(_result, response_code, headers, body):
 		high_scores = []
 
 func _on_save_scores_complete(_result, _response_code, _headers, _body) -> void:
-	print("Save_result", _result)
-	print("response_code", _response_code)
-	print("_body", _body.get_string_from_utf8())
 	save_completed.emit()
 	
 func _get_request_headers() -> Array[String]:
@@ -72,7 +68,6 @@ func _save() -> void:
 		"scores": high_scores
 	})
 	var headers = _get_request_headers()
-	print("SCORES", json)
 	save_scores_request.request(API_URL + "update_scores.php", headers, HTTPClient.METHOD_POST, json)
 
 func add_high_score(score_name: String, score: int) -> void:

@@ -14,4 +14,4 @@ func play_sfx(stream: AudioStream, bus: String) -> void:
 		sfx_stream_02.stream = stream
 		sfx_stream_02.play()
 	else:
-		print("Both streams are playing...")
+		pass

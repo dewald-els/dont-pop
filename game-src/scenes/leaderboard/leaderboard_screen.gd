@@ -13,8 +13,6 @@ func _ready() -> void:
 	
 	back_button.did_press.connect(_on_back_pressed)
 	
-	print(high_scores)
-	
 	if not high_scores or high_scores.size() == 0:
 		var label = get_label_with_theme("No high scores...")
 		high_scores_container.add_child(label)

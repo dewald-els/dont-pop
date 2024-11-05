@@ -14,12 +14,12 @@ func _ready() -> void:
 func _on_score_saved() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn") 
 
-func _on_name_confirm(name: String) -> void:
+func _on_name_confirm(confirmed_name: String) -> void:
 	if saving:
 		return
 		
 	saving = true
 	notice_text.text = "Saving..."
 	var score = ScoreKeeper.score
-	HighScoreManager.add_high_score(name, score)
+	HighScoreManager.add_high_score(confirmed_name, score)
 	
