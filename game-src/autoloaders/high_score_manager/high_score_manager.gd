@@ -3,7 +3,6 @@ extends Node
 @onready var save_scores_request: HTTPRequest = %SaveScoresRequest
 @onready var get_scores_request: HTTPRequest = %GetScoresRequest
 
-const SAVE_DATA_PATH: String = "user://dontpop_leaderboar.save"
 const API_URL: String = "https://dontpop.dewaldels.com/"
 const API_KEY: String = "Arkkm4adT3uqoPJsi7jMY4SO"
 

@@ -155,8 +155,7 @@ player_death = ExtResource("2_sp5ny")
 
 [node name="VelocityComponent" parent="." instance=ExtResource("3_5d6r7")]
 unique_name_in_owner = true
-max_speed = 120
-acceleration = 15.0
+max_speed = 150
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
