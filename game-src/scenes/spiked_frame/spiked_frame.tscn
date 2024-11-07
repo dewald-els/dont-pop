@@ -1,8 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://004srx1eu3sv"]
+[gd_scene load_steps=7 format=3 uid="uid://004srx1eu3sv"]
 
 [ext_resource type="Texture2D" uid="uid://dth04gc8nfx5y" path="res://scenes/environment/spikes/sprites/spike.png" id="1_jngwm"]
+[ext_resource type="Script" path="res://scenes/spiked_frame/spiked_frame.gd" id="1_p2bdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76dt0"]
+size = Vector2(283, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t7er"]
+size = Vector2(6.5, 178.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oilo4"]
+size = Vector2(291.5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2opc7"]
+size = Vector2(11, 178)
 
 [node name="Spikes" type="Node2D"]
+script = ExtResource("1_p2bdf")
 
 [node name="SpikesTop" type="Node2D" parent="."]
 
@@ -577,3 +591,31 @@ texture = ExtResource("1_jngwm")
 [node name="Spike27" type="Sprite2D" parent="SpikesLeft"]
 position = Vector2(186, 2)
 texture = ExtResource("1_jngwm")
+
+[node name="TopArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopArea"]
+position = Vector2(140.5, -0.5)
+shape = SubResource("RectangleShape2D_76dt0")
+
+[node name="LeftArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea"]
+position = Vector2(-0.25, 90.875)
+shape = SubResource("RectangleShape2D_1t7er")
+
+[node name="BottomArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomArea"]
+position = Vector2(142.25, 178.5)
+shape = SubResource("RectangleShape2D_oilo4")
+
+[node name="RightArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea"]
+position = Vector2(282.5, 92)
+shape = SubResource("RectangleShape2D_2opc7")

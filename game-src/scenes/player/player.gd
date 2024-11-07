@@ -1,17 +1,19 @@
 class_name Player extends CharacterBody2D
 
 
-var base_speed: float = 0.0
-
+@onready var experience_range_area: Area2D = %ExperienceRangeArea
 @onready var velocity_component: VelocityComponent = %VelocityComponent
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite
 
 @export var player_death: PackedScene
+@export var experience_manager: ExperienceManager
 
+var base_speed: float = 0.0
 var is_dead: bool = false
 
 func _ready() -> void:
 	SignalBus.connect("player_popped", on_player_popped)
+	experience_range_area.area_entered.connect(_on_experience_range_entered)
 	base_speed = velocity_component.max_speed
 	
 
@@ -77,3 +79,6 @@ func on_player_popped() -> void:
 	get_tree().root.add_child(death)
 	death.global_position = global_position
 	queue_free()
+	
+func _on_experience_range_entered(other_area: Area2D) -> void:
+	experience_manager.increment_experience(other_area.owner.experience_value)

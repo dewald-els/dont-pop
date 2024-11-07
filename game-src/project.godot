@@ -83,6 +83,10 @@ player_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="experience"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
