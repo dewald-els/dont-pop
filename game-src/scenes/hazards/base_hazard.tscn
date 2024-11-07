@@ -9,8 +9,6 @@ script = ExtResource("1_126rc")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="ExperienceArea2D" type="Area2D" parent="."]
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="SfxThrow" type="AudioStreamPlayer2D" parent="."]

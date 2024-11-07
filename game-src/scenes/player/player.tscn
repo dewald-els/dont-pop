@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://du4y724ojgcem"]
+[gd_scene load_steps=26 format=3 uid="uid://du4y724ojgcem"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_oyv21"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="2_qs4dp"]
@@ -147,9 +147,6 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_v62w7"]
-radius = 9.0
-
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 2
 motion_mode = 1
@@ -169,12 +166,3 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_lhbr7")
 animation = &"pop"
 autoplay = "idle"
-
-[node name="ExperienceRangeArea" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExperienceRangeArea"]
-position = Vector2(0, -3)
-shape = SubResource("CircleShape2D_v62w7")

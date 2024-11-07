@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://q1ow27yuxuw5"]
+[gd_scene load_steps=4 format=3 uid="uid://q1ow27yuxuw5"]
 
 [ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_lt3ex"]
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_t7rul"]
@@ -6,23 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nutk"]
 size = Vector2(2.6087, 6.95652)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_csjh0"]
-radius = 9.60466
-
 [node name="Needle" instance=ExtResource("1_lt3ex")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-0.434783, 0)
 shape = SubResource("RectangleShape2D_0nutk")
 
-[node name="ExperienceArea2D" parent="." index="1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExperienceArea2D" index="0"]
-shape = SubResource("CircleShape2D_csjh0")
-
-[node name="Sprite2D" parent="." index="2"]
+[node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_t7rul")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 21)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://84k2rn8vw4pd"]
+[gd_scene load_steps=3 format=3 uid="uid://84k2rn8vw4pd"]
 
 [ext_resource type="Script" path="res://scenes/experience_bar/experience_bar.gd" id="1_tyoch"]
+[ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="2_f4qga"]
 
 [node name="ExperienceBar" type="CanvasLayer"]
 script = ExtResource("1_tyoch")
+metadata/_edit_horizontal_guides_ = [20.0]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -12,13 +14,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 56
+theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 12
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
+theme = ExtResource("2_f4qga")
 max_value = 1.0
 step = 0.1
 value = 0.5

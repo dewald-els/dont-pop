@@ -2,11 +2,8 @@ class_name BaseHazard
 extends CharacterBody2D
 
 @export var ROTATION_SPEED: float = 5.0
-@export var experience_value: float = 1.0
-
 @onready var hazard_area: Area2D = $Area2D
 @onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
-
 
 var target_position: Vector2
 var speed: float

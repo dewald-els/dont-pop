@@ -4,18 +4,20 @@ class_name Spawner extends Node2D
 @onready var viewport_width: int = ProjectSettings.get_setting("display/window/size/viewport_width")
 @onready var spawn_timer: Timer = %SpawnTimer
 
+@export var spawn_interval: float = 2.5
 @export var spawn_distance: int
 @export var items: Array[PackedScene]
 
-var duration: float = 0.0
+#var duration: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	spawn_timer.wait_time = spawn_interval
 	spawn_timer.connect("timeout", on_spawn_timeout)
+	spawn_timer.start()
 	
-	
-func _process(delta: float) -> void:
-	duration += delta
+#func _process(delta: float) -> void:
+	#duration += delta
 	
 func randomize_spawn_point() -> Vector2:
 	var spawn_point: Vector2 = Vector2.ZERO
@@ -44,7 +46,6 @@ func on_spawn_timeout() -> void:
 		item.speed = randf_range(250.0, 325.0)
 		item.global_position = location
 		get_parent().add_child(item)
-		spawn_timer.wait_time = randf_range(0.40, 1.25)
 		spawn_timer.start()
 	
 	

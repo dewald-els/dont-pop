@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c18cqf5p0osk7"]
+[gd_scene load_steps=4 format=3 uid="uid://c18cqf5p0osk7"]
 
 [ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_ueckh"]
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_lojgy"]
@@ -6,23 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12pqg"]
 size = Vector2(2.6087, 7.82609)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8adcw"]
-radius = 10.4348
-
 [node name="Tac" instance=ExtResource("1_ueckh")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-0.434783, 2.17391)
 shape = SubResource("RectangleShape2D_12pqg")
 
-[node name="ExperienceArea2D" parent="." index="1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExperienceArea2D" index="0"]
-shape = SubResource("CircleShape2D_8adcw")
-
-[node name="Sprite2D" parent="." index="2"]
+[node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_lojgy")
 region_enabled = true
 region_rect = Rect2(32, 0, 16, 21)
