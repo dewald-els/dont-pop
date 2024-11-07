@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://csf1nn1indtjx"]
+[gd_scene load_steps=5 format=3 uid="uid://csf1nn1indtjx"]
 
 [ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_gp5cp"]
+[ext_resource type="Resource" uid="uid://dde451ecalva6" path="res://scenes/hazards/safety_pin/safety_pin_properties.tres" id="2_n6joo"]
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_ydr2s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1e3t"]
@@ -9,6 +10,7 @@ height = 13.913
 
 [node name="SafetyPin" instance=ExtResource("1_gp5cp")]
 position = Vector2(-1, 0)
+hazard_properties = ExtResource("2_n6joo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(1, 0)

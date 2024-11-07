@@ -45,7 +45,6 @@ func on_spawn_timeout() -> void:
 		var location: Vector2 = randomize_spawn_point()
 		var random_item_scene = items[randi() % items.size()]
 		var item: BaseHazard = random_item_scene.instantiate()
-		item.speed = randf_range(250.0, 325.0)
 		item.global_position = location
 		get_parent().add_child(item)
 		spawn_timer.wait_time = spawn_interval

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HazardPropertiesResource" load_steps=2 format=3 uid="uid://cwyi8q44ta6c"]
+
+[ext_resource type="Script" path="res://scenes/hazards/hazard_properties.gd" id="1_p10ua"]
+
+[resource]
+script = ExtResource("1_p10ua")
+id = "cactus"
+name = "Cactus"
+base_speed = 75.0
+base_damage = 1.0
+rotation_speed = 5.0

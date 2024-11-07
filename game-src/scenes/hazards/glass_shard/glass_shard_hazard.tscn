@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyaru32e354ir"]
+
+[ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_mdtpo"]
+[ext_resource type="Resource" uid="uid://cc6fhbcf5ftgt" path="res://scenes/hazards/glass_shard/glass_shard_properties.tres" id="2_4sxrm"]
+[ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_hqkuf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v47s2"]
+size = Vector2(6.08696, 13.0435)
+
+[node name="GlassShardHazard" instance=ExtResource("1_mdtpo")]
+hazard_properties = ExtResource("2_4sxrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.434783, 0.434782)
+shape = SubResource("RectangleShape2D_v47s2")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_hqkuf")
+region_enabled = true
+region_rect = Rect2(3, 24, 9, 16)

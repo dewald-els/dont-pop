@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceceo50uw2082"]
+[gd_scene load_steps=5 format=3 uid="uid://ceceo50uw2082"]
 
 [ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_do03o"]
+[ext_resource type="Resource" uid="uid://cp1qp35hwf1rn" path="res://scenes/hazards/knife/knife_properties.tres" id="2_dw0t1"]
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_eorwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7ukx"]
 size = Vector2(3.47826, 11.3044)
 
 [node name="Knife" instance=ExtResource("1_do03o")]
+hazard_properties = ExtResource("2_dw0t1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-0.869566, 3.91305)

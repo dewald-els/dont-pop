@@ -1,12 +1,12 @@
 class_name BaseHazard
 extends CharacterBody2D
 
-@export var ROTATION_SPEED: float = 5.0
+@export var hazard_properties: HazardPropertiesResource
+
 @onready var hazard_area: Area2D = $Area2D
 @onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
 
 var target_position: Vector2
-var speed: float
 var direction: Vector2
 
 func _ready() -> void:
@@ -19,18 +19,16 @@ func _ready() -> void:
 		
 	target_position = PlayerTracker.get_last_position()
 	direction = target_position - global_position
-	
+	velocity = direction.normalized() * hazard_properties.base_speed
 	get_tree().create_timer(5.0).connect("timeout", on_destroy)
 	
 	sfx_throw.play()
 
 		
 func _physics_process(delta: float) -> void:
-	rotation += ROTATION_SPEED * delta
-	velocity += direction.normalized() * speed * delta
+	rotation += hazard_properties.rotation_speed * delta
 	move_and_slide()
 	
-
 
 func on_destroy() -> void:
 	queue_free()

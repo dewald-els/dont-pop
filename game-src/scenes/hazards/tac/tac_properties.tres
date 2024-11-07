@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HazardPropertiesResource" load_steps=2 format=3 uid="uid://cjx4be0j00aac"]
+
+[ext_resource type="Script" path="res://scenes/hazards/hazard_properties.gd" id="1_f6p6d"]
+
+[resource]
+script = ExtResource("1_f6p6d")
+id = "tac"
+name = "Tac"
+base_speed = 75.0
+base_damage = 1.0
+rotation_speed = 5.0

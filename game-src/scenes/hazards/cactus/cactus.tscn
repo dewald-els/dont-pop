@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://tb80yymqugnr"]
+[gd_scene load_steps=6 format=3 uid="uid://tb80yymqugnr"]
 
 [ext_resource type="PackedScene" uid="uid://tqicn2rmaf0s" path="res://scenes/hazards/base_hazard.tscn" id="1_j83ea"]
+[ext_resource type="Script" path="res://scenes/hazards/cactus/cactus.gd" id="2_ax28m"]
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_hpl2d"]
+[ext_resource type="Resource" uid="uid://cwyi8q44ta6c" path="res://scenes/hazards/cactus/cactus_properties.tres" id="3_qshm8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhovp"]
 radius = 4.34783
 
 [node name="Cactus" instance=ExtResource("1_j83ea")]
+script = ExtResource("2_ax28m")
+hazard_properties = ExtResource("3_qshm8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(0.869565, -3.47826)
