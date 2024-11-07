@@ -14,9 +14,9 @@ func _ready() -> void:
 func apply_upgrade() -> void:
 	pass
 
-func get_random_upgrades(number_of_upgrades: int = 3) -> Array:
+func get_random_upgrades(_number_of_upgrades: int = 3) -> Array:
 	return []
 
 
-func _on_player_level_up(new_level: int) -> void:
+func _on_player_level_up(_new_level: int) -> void:
 	pass

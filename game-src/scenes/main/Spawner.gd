@@ -11,6 +11,8 @@ const MIN_SPAWN_INTERVAL: float = 0.75
 @export var items: Array[PackedScene]
 @export var experience_manager: ExperienceManager
 
+var base_speed_multiplier: float = 0.0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,23 +41,32 @@ func randomize_spawn_point() -> Vector2:
 	return spawn_point
 	
 	
+func _calculate_new_spawn_interval(new_player_level: int) -> float:
+	if spawn_interval > MIN_SPAWN_INTERVAL:
+		var new_spawn_interval: float = spawn_interval - (new_player_level * 0.05)
+		return max(
+			MIN_SPAWN_INTERVAL,
+			new_spawn_interval
+		)
+	else:
+		return spawn_interval
+		
+func _calculate_new_base_speed_multiplier(new_player_level: int) -> float:
+	var new_base_speed = base_speed_multiplier + (new_player_level * 0.015)
+	return new_base_speed
 
 func on_spawn_timeout() -> void: 
 	if items and items.size() > 0:
 		var location: Vector2 = randomize_spawn_point()
-		var random_item_scene = items[randi() % items.size()]
+		var random_item_scene = items.pick_random()
 		var item: BaseHazard = random_item_scene.instantiate()
 		item.global_position = location
+		item.hazard_properties.base_speed = item.hazard_properties.base_speed + (item.hazard_properties.base_speed * base_speed_multiplier)
 		get_parent().add_child(item)
 		spawn_timer.wait_time = spawn_interval
 		spawn_timer.start()
 	
 func _on_player_level_up(level: int) -> void:
-	if spawn_interval > MIN_SPAWN_INTERVAL:
-		var new_spawn_interval: float = spawn_interval - (level * 0.05)
-		print("new_spawn_interval", new_spawn_interval)
-		spawn_interval = max(
-			MIN_SPAWN_INTERVAL,
-			new_spawn_interval
-		)
+	spawn_interval = _calculate_new_spawn_interval(level)
+	base_speed_multiplier = _calculate_new_base_speed_multiplier(level)
 	
