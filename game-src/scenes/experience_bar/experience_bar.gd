@@ -21,5 +21,5 @@ func _on_experience_changed(current_xp: float, target_xp: float) -> void:
 	var percentage: float = current_xp / target_xp
 	progress_bar.value = percentage
 
-func _on_level_up() -> void:
+func _on_level_up(level: int) -> void:
 	pass

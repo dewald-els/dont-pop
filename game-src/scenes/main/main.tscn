@@ -1,17 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bl6llr4ffnreu"]
+[gd_scene load_steps=13 format=3 uid="uid://bl6llr4ffnreu"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_hd1vc"]
 [ext_resource type="PackedScene" uid="uid://du4y724ojgcem" path="res://scenes/player/player.tscn" id="1_nub53"]
 [ext_resource type="PackedScene" uid="uid://bte7a31kni2f3" path="res://scenes/managers/experience_manager/experience_manager.tscn" id="2_b57qf"]
 [ext_resource type="PackedScene" uid="uid://dwuyy3ql1c62b" path="res://scenes/managers/upgrade_manager/upgrade_manager.tscn" id="3_8l031"]
-[ext_resource type="Script" path="res://scenes/main/Spawner.gd" id="3_cw6vf"]
 [ext_resource type="PackedScene" uid="uid://84k2rn8vw4pd" path="res://scenes/experience_bar/experience_bar.tscn" id="3_ue2ic"]
-[ext_resource type="PackedScene" uid="uid://q1ow27yuxuw5" path="res://scenes/hazards/needle/needle.tscn" id="4_16rsf"]
-[ext_resource type="PackedScene" uid="uid://csf1nn1indtjx" path="res://scenes/hazards/safety_pin/safety_pin.tscn" id="5_mnt76"]
-[ext_resource type="PackedScene" uid="uid://ceceo50uw2082" path="res://scenes/hazards/knife/knife.tscn" id="6_34vd5"]
-[ext_resource type="PackedScene" uid="uid://tb80yymqugnr" path="res://scenes/hazards/cactus/cactus.tscn" id="7_3aywn"]
 [ext_resource type="PackedScene" uid="uid://78jtpbbmcqac" path="res://scenes/managers/score_manager/score_manager.tscn" id="7_g6d4q"]
-[ext_resource type="PackedScene" uid="uid://c18cqf5p0osk7" path="res://scenes/hazards/tac/tac.tscn" id="8_inm1i"]
+[ext_resource type="PackedScene" uid="uid://ce8j4q71x7mpa" path="res://scenes/managers/hazard_spawner/hazard_spawner.tscn" id="9_af3i4"]
 [ext_resource type="Texture2D" uid="uid://c21ys13oh3bso" path="res://scenes/resources/tiles/sprite/tile.png" id="9_cc8cr"]
 [ext_resource type="Script" path="res://scenes/main/tracker.gd" id="10_gh5k0"]
 [ext_resource type="PackedScene" uid="uid://ll2ljfri1nsi" path="res://scenes/environment/clouds/clouds.tscn" id="11_158hm"]
@@ -47,14 +42,8 @@ texture = ExtResource("9_cc8cr")
 position = Vector2(141, 85)
 experience_manager = NodePath("../Managers/ExperienceManager")
 
-[node name="Spawner" type="Node2D" parent="."]
-script = ExtResource("3_cw6vf")
-spawn_distance = 100
-items = Array[PackedScene]([ExtResource("4_16rsf"), ExtResource("5_mnt76"), ExtResource("6_34vd5"), ExtResource("7_3aywn"), ExtResource("8_inm1i")])
-
-[node name="SpawnTimer" type="Timer" parent="Spawner"]
-unique_name_in_owner = true
-one_shot = true
+[node name="HazardSpawner" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("9_af3i4")]
+experience_manager = NodePath("../Managers/ExperienceManager")
 
 [node name="Tracker" type="Node2D" parent="."]
 unique_name_in_owner = true

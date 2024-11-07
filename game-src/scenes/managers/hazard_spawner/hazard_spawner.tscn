@@ -1,0 +1,17 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce8j4q71x7mpa"]
+
+[ext_resource type="Script" path="res://scenes/main/Spawner.gd" id="1_knav6"]
+[ext_resource type="PackedScene" uid="uid://q1ow27yuxuw5" path="res://scenes/hazards/needle/needle.tscn" id="2_ybjav"]
+[ext_resource type="PackedScene" uid="uid://csf1nn1indtjx" path="res://scenes/hazards/safety_pin/safety_pin.tscn" id="3_ck0vv"]
+[ext_resource type="PackedScene" uid="uid://ceceo50uw2082" path="res://scenes/hazards/knife/knife.tscn" id="4_j82e5"]
+[ext_resource type="PackedScene" uid="uid://tb80yymqugnr" path="res://scenes/hazards/cactus/cactus.tscn" id="5_vbh8i"]
+[ext_resource type="PackedScene" uid="uid://c18cqf5p0osk7" path="res://scenes/hazards/tac/tac.tscn" id="6_co4tq"]
+
+[node name="HazardSpawner" type="Node2D"]
+script = ExtResource("1_knav6")
+spawn_distance = 100
+items = Array[PackedScene]([ExtResource("2_ybjav"), ExtResource("3_ck0vv"), ExtResource("4_j82e5"), ExtResource("5_vbh8i"), ExtResource("6_co4tq")])
+
+[node name="SpawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
