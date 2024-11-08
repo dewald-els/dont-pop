@@ -4,10 +4,14 @@ extends Node
 
 @export var game_song_stream: AudioStream;
 @export var died_stream: AudioStream;
+@export var enable_music: bool = true
 
 var playing: String
 
 func play_game_song() -> void:
+	if not enable_music:
+		return 
+		
 	if playing == "game_song_stream":
 		return
 	stream_player.stop()
@@ -15,7 +19,11 @@ func play_game_song() -> void:
 	stream_player.play()
 	playing = "game_song_stream"
 
+
 func play_died_song() -> void:
+	if not enable_music:
+		return 
+		
 	if playing == "died_stream":
 		return
 	stream_player.stop()

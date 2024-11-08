@@ -139,6 +139,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "High Scores"
 
+[node name="OptionsButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
 [node name="QuitButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
 unique_name_in_owner = true
 layout_mode = 2

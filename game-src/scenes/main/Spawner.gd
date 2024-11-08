@@ -50,10 +50,12 @@ func _calculate_new_spawn_interval(new_player_level: int) -> float:
 		)
 	else:
 		return spawn_interval
+
 		
 func _calculate_new_base_speed_multiplier(new_player_level: int) -> float:
 	var new_base_speed = base_speed_multiplier + (new_player_level * 0.015)
 	return new_base_speed
+
 
 func on_spawn_timeout() -> void: 
 	if items and items.size() > 0:
@@ -61,10 +63,11 @@ func on_spawn_timeout() -> void:
 		var random_item_scene = items.pick_random()
 		var item: BaseHazard = random_item_scene.instantiate()
 		item.global_position = location
-		item.hazard_properties.base_speed = item.hazard_properties.base_speed + (item.hazard_properties.base_speed * base_speed_multiplier)
+		item.increase_base_speed(base_speed_multiplier)
 		get_parent().add_child(item)
 		spawn_timer.wait_time = spawn_interval
 		spawn_timer.start()
+
 	
 func _on_player_level_up(level: int) -> void:
 	spawn_interval = _calculate_new_spawn_interval(level)
