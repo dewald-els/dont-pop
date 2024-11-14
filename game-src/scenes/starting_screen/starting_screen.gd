@@ -23,5 +23,5 @@ func _on_ready_timeout() -> void:
 	countdown_label.text = str(ceil(time_left))
 	countdown_stream_player_2d.play()
 	if time_left == 0:
-		_on_timeout_finished()
+		Callable(_on_timeout_finished).call_deferred()
 	
