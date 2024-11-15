@@ -12,7 +12,7 @@ const MIN_SPAWN_INTERVAL: float = 0.75
 @export var experience_manager: ExperienceManager
 
 
-var hazard_instances: Array[BaseHazard] = []
+var hazards_pool: Array[BaseHazard] = []
 var base_speed_multiplier: float = 0.0
 
 
@@ -24,7 +24,7 @@ func _ready() -> void:
 	for item in items:
 		var instance = item.instantiate() as BaseHazard
 		instance.global_position = Vector2(-100, -100)
-		hazard_instances.append(instance)
+		hazards_pool.append(instance)
 		get_parent().add_child.call_deferred(instance)
 		
 	spawn_timer.wait_time = spawn_interval
@@ -69,7 +69,7 @@ func _calculate_new_base_speed_multiplier(new_player_level: int) -> float:
 func on_spawn_timeout() -> void: 
 	if items and items.size() > 0:
 		var location: Vector2 = randomize_spawn_point()
-		var item: BaseHazard = hazard_instances.pick_random()
+		var item: BaseHazard = hazards_pool.pick_random()
 		item.global_position = location
 		item.wake_up()
 		spawn_timer.wait_time = spawn_interval
@@ -79,6 +79,6 @@ func on_spawn_timeout() -> void:
 func _on_player_level_up(level: int) -> void:
 	spawn_interval = _calculate_new_spawn_interval(level)
 	base_speed_multiplier = _calculate_new_base_speed_multiplier(level)
-	for hazard in hazard_instances:
+	for hazard in hazards_pool:
 		hazard.hazard_properties.base_speed += hazard.hazard_properties.base_speed * base_speed_multiplier
 	

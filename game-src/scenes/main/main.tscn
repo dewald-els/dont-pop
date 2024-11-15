@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bl6llr4ffnreu"]
+[gd_scene load_steps=14 format=3 uid="uid://bl6llr4ffnreu"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_hd1vc"]
 [ext_resource type="PackedScene" uid="uid://du4y724ojgcem" path="res://scenes/player/player.tscn" id="1_nub53"]
 [ext_resource type="PackedScene" uid="uid://bte7a31kni2f3" path="res://scenes/managers/experience_manager/experience_manager.tscn" id="2_b57qf"]
 [ext_resource type="PackedScene" uid="uid://dwuyy3ql1c62b" path="res://scenes/managers/upgrade_manager/upgrade_manager.tscn" id="3_8l031"]
 [ext_resource type="PackedScene" uid="uid://84k2rn8vw4pd" path="res://scenes/experience_bar/experience_bar.tscn" id="3_ue2ic"]
+[ext_resource type="PackedScene" uid="uid://d3lfcp07jxij" path="res://scenes/upgrade_selector_screen/upgrade_selector_screen.tscn" id="6_4chb8"]
 [ext_resource type="PackedScene" uid="uid://78jtpbbmcqac" path="res://scenes/managers/score_manager/score_manager.tscn" id="7_g6d4q"]
 [ext_resource type="PackedScene" uid="uid://ce8j4q71x7mpa" path="res://scenes/managers/hazard_spawner/hazard_spawner.tscn" id="9_af3i4"]
 [ext_resource type="Texture2D" uid="uid://c21ys13oh3bso" path="res://scenes/resources/tiles/sprite/tile.png" id="9_cc8cr"]
@@ -29,6 +30,7 @@ experience_manager = NodePath("../Managers/ExperienceManager")
 
 [node name="UpgradeManager" parent="Managers" node_paths=PackedStringArray("experience_manager") instance=ExtResource("3_8l031")]
 experience_manager = NodePath("../ExperienceManager")
+upgrade_scene = ExtResource("6_4chb8")
 
 [node name="ScoreManager" parent="Managers" node_paths=PackedStringArray("experience_manager") instance=ExtResource("7_g6d4q")]
 experience_manager = NodePath("../ExperienceManager")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3lfcp07jxij"]
+
+[ext_resource type="Script" path="res://scenes/upgrade_selector_screen/upgrade_selector_screen.gd" id="1_6pbuf"]
+
+[node name="UpgradeSelectorScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_6pbuf")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="TestButton" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select Upgrade"

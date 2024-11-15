@@ -22,6 +22,8 @@ func _physics_process(_delta: float) -> void:
 	velocity_component.accelerate(direction)
 	velocity_component.move(self)
 
+	play_animation(direction)
+	face_movement_direction(direction.x)
 	
 	
 func get_input_vector() -> Vector2:
@@ -41,10 +43,8 @@ func face_movement_direction(direction: float) -> void:
 		scale.x = scale.y * -1
 
 
-func play_animation() -> void:
-	if is_dead:
-		animated_sprite.play("pop")
-	elif velocity != Vector2.ZERO:
+func play_animation(direction: Vector2) -> void:
+	if direction != Vector2.ZERO:
 		animated_sprite.play("move")
 	else:
 		animated_sprite.play("idle")
