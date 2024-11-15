@@ -1,7 +1,31 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dotqp0rwr17pi"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dotqp0rwr17pi"]
 
 [ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="1_gi42i"]
 [ext_resource type="Texture2D" uid="uid://btgm0qgmkb0b" path="res://assets/panels.png" id="2_ppjry"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0ycu"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("2_ppjry")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(1, 32, 4, 4)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpq8p"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("2_ppjry")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(11, 32, 4, 4)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20dry"]
 texture = ExtResource("2_ppjry")
@@ -37,6 +61,16 @@ border_color = Color(0.239216, 0.160784, 0.188235, 1)
 [resource]
 default_font = ExtResource("1_gi42i")
 default_font_size = 12
+Button/colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
+Button/constants/outline_size = 3
+Button/font_sizes/font_size = 8
+Button/fonts/font = ExtResource("1_gi42i")
+Button/styles/normal = SubResource("StyleBoxTexture_i0ycu")
+ButtonOrange/base_type = &"Button"
+ButtonOrange/constants/outline_size = 3
+ButtonOrange/font_sizes/font_size = 8
+ButtonOrange/fonts/font = ExtResource("1_gi42i")
+ButtonOrange/styles/normal = SubResource("StyleBoxTexture_fpq8p")
 Label/colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
 Label/constants/outline_size = 4
 Label/font_sizes/font_size = 12

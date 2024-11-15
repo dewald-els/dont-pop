@@ -6,7 +6,6 @@ extends PanelContainer
 
 var _upgrade: PlayerAbilityUpgrade
 
-
 func set_upgrade(upgrade: PlayerAbilityUpgrade) -> void:
 	_upgrade = upgrade
 	
