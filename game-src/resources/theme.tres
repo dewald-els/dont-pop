@@ -13,9 +13,9 @@ region_rect = Rect2(0, 0, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqvw7"]
 texture = ExtResource("2_ppjry")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
+texture_margin_left = 3.0
+texture_margin_top = 4.0
+texture_margin_right = 3.0
 texture_margin_bottom = 1.0
 region_rect = Rect2(16, 0, 16, 16)
 
