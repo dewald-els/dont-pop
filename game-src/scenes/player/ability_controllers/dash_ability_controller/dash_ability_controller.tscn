@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqralcuss8mwi"]
+
+[ext_resource type="Script" path="res://scenes/player/ability_controllers/dash_ability_controller/dash_ability_controller.gd" id="1_uwcgr"]
+
+[node name="DashAbilityController" type="Node"]
+script = ExtResource("1_uwcgr")

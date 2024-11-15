@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAbilityUpgradeResource" load_steps=2 format=3 uid="uid://cr7a355iakkrq"]
+
+[ext_resource type="Script" path="res://scenes/player/player_upgrades/ability_upgrade.gd" id="1_vdoll"]
+
+[resource]
+script = ExtResource("1_vdoll")
+id = "player_speed"
+name = "Speed boost"
+max_quantity = 5
+description = "Increase your floating speed by 10%"

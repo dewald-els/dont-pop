@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAbilityUpgradeResource" load_steps=2 format=3 uid="uid://d4nsf8bnnark6"]
+
+[ext_resource type="Script" path="res://scenes/player/player_upgrades/ability_upgrade.gd" id="1_i6b4j"]
+
+[resource]
+script = ExtResource("1_i6b4j")
+id = "player_dash"
+name = "Dash"
+max_quantity = 1
+description = "Quickly dash in a direction to avoid hazards. You become immune while dashing"

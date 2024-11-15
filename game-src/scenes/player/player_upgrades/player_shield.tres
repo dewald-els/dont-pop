@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAbilityUpgradeResource" load_steps=2 format=3 uid="uid://df535bvyaqfe5"]
+
+[ext_resource type="Script" path="res://scenes/player/player_upgrades/ability_upgrade.gd" id="1_ohded"]
+
+[resource]
+script = ExtResource("1_ohded")
+id = "player_shield"
+name = "Shield"
+max_quantity = 1
+description = "Gain a protective shield that makes you immune for one hit"

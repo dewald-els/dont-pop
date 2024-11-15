@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAbilityUpgradeResource" load_steps=2 format=3 uid="uid://b8h53y3qu4m8g"]
+
+[ext_resource type="Script" path="res://scenes/player/player_upgrades/ability_upgrade.gd" id="1_30yfv"]
+
+[resource]
+script = ExtResource("1_30yfv")
+id = "player_health"
+name = "Extra health"
+max_quantity = 3
+description = "Gain extra health that is reduced by one when hit"
