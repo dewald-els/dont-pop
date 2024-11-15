@@ -3,13 +3,12 @@ extends CanvasLayer
 
 signal upgrade_selected
 
-@onready var test_button: Button = %TestButton
+@export var upgrade_panel_scene: PackedScene
 
-var available_upgrades: Array[PlayerAbilityUpgrade] = []
+@onready var upgrades_grid_container: VBoxContainer = %UpgradesGridContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	test_button.pressed.connect(_on_test_pressed)
 	get_tree().paused = true
 	
 func _on_test_pressed() -> void:
@@ -18,4 +17,12 @@ func _on_test_pressed() -> void:
 
 
 func set_available_upgrades(upgrades: Array[PlayerAbilityUpgrade]) -> void:
-	pass
+	var delay: float = 0.0
+	
+	for upgrade in upgrades:
+		var picker_instance: PlayerUpgradePanel = upgrade_panel_scene.instantiate()
+		upgrades_grid_container.add_child(picker_instance)
+		picker_instance.set_upgrade(upgrade)
+		#picker_instance.play_in(delay)
+		#picker_instance.selected.connect(_handle_upgrade_selected.bind(upgrade))
+		delay += 0.2

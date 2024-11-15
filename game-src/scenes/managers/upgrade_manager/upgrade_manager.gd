@@ -25,7 +25,7 @@ func _ready() -> void:
 	upgrade_pool.add_item(_upgrade_player_shield, 10)
 
 
-func get_random_upgrades(_number_of_upgrades: int = 3) -> Array:
+func get_random_upgrades(_number_of_upgrades: int = 3) -> Array[PlayerAbilityUpgrade]:
 	# First time, only show speed boost
 	if number_of_upgrades_to_show == 1:
 		number_of_upgrades_to_show = 3
@@ -73,7 +73,7 @@ func _on_player_level_up(_new_level: int) -> void:
 	if upgrades.size() == 0:
 		return
 		
-	var upgrade_instance = upgrade_scene.instantiate()
+	var upgrade_instance: UpgradeSelectorScreen = upgrade_scene.instantiate()
 	get_tree().root.add_child(upgrade_instance)
 	upgrade_instance.set_available_upgrades(upgrades)
 	upgrade_instance.upgrade_selected.connect(func(upgrade):

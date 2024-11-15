@@ -1,6 +1,23 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dotqp0rwr17pi"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dotqp0rwr17pi"]
 
 [ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="1_gi42i"]
+[ext_resource type="Texture2D" uid="uid://btgm0qgmkb0b" path="res://assets/panels.png" id="2_ppjry"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20dry"]
+texture = ExtResource("2_ppjry")
+texture_margin_left = 3.0
+texture_margin_top = 4.0
+texture_margin_right = 3.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqvw7"]
+texture = ExtResource("2_ppjry")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(16, 0, 16, 16)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8j0n"]
 bg_color = Color(0.898039, 0.490196, 0.533333, 1)
@@ -24,6 +41,9 @@ Label/colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
 Label/constants/outline_size = 4
 Label/font_sizes/font_size = 12
 Label/fonts/font = ExtResource("1_gi42i")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_20dry")
+PanelContainerAlt/base_type = &"PanelContainer"
+PanelContainerAlt/styles/panel = SubResource("StyleBoxTexture_nqvw7")
 ProgressBar/constants/outline_size = 5
 ProgressBar/styles/background = SubResource("StyleBoxFlat_s8j0n")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_ekrie")
