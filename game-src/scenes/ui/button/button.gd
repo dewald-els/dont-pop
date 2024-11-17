@@ -1,9 +1,8 @@
 class_name GameButton
 extends Button
 
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
-#var click_stream: AudioStream
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = %AudioStreamPlayer2D
 
 signal did_press
 

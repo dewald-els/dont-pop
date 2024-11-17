@@ -133,6 +133,7 @@ theme_override_constants/separation = 3
 [node name="PlayButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"ButtonYellow"
 
 [node name="HighScoresButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
 unique_name_in_owner = true
@@ -143,6 +144,7 @@ text = "High Scores"
 [node name="OptionsButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"ButtonOrange"
 text = "Options"
 
 [node name="QuitButton" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_13i7x")]
