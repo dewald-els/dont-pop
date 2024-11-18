@@ -29,28 +29,25 @@ theme_override_constants/margin_right = 16
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="GameLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_6arbj")
 text = "Level up!"
 horizontal_alignment = 1
 script = ExtResource("3_cbwqp")
 
-[node name="GameLabel2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameLabel2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_6arbj")
 theme_override_font_sizes/font_size = 8

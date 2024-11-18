@@ -24,5 +24,11 @@ func set_available_upgrades(upgrades: Array[PlayerAbilityUpgrade]) -> void:
 		upgrades_grid_container.add_child(picker_instance)
 		picker_instance.set_upgrade(upgrade)
 		#picker_instance.play_in(delay)
-		#picker_instance.selected.connect(_handle_upgrade_selected.bind(upgrade))
+		picker_instance.upgrade_selected.connect(_handle_upgrade_selected)
 		delay += 0.2
+
+func _handle_upgrade_selected(upgrade: PlayerAbilityUpgrade) -> void:
+	print("selected upgrade: ", upgrade)
+	get_tree().paused = false
+	upgrade_selected.emit(upgrade)
+	pass

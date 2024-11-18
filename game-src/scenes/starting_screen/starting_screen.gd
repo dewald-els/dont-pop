@@ -11,6 +11,7 @@ var time_left: int = 3
 func _ready() -> void:
 	ready_timer.timeout.connect(_on_ready_timeout)
 	countdown_label.text = str(time_start)
+	countdown_stream_player_2d.play()
 	get_tree().paused = true
 	
 	
