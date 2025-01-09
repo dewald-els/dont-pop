@@ -16,4 +16,7 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if "Player" in body.name:
-		SignalBus.player_popped.emit()
+		var hc: HealthComponent = body.health_component
+		hc.remove_health(
+			hc.health
+		)

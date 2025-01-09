@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SpeedUpgradeResource" load_steps=2 format=3 uid="uid://clivhjjqnm00p"]
+
+[ext_resource type="Script" path="res://resources/upgrades/speed/speed_upgrade_resource.gd" id="1_y6myv"]
+
+[resource]
+script = ExtResource("1_y6myv")
+speed_amount = 0.0
+id = "speed_upgrade_20_percent"
+name = "Gusty"
+description = "Boost our speed by 20%"

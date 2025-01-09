@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://du4y724ojgcem"]
+[gd_scene load_steps=27 format=3 uid="uid://du4y724ojgcem"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_oyv21"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="2_qs4dp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmwxsw6cy1nn8" path="res://scenes/components/velocity/velocity_component.tscn" id="3_5d6r7"]
 [ext_resource type="Texture2D" uid="uid://butsnj0v5sm43" path="res://scenes/player/sprites/move.png" id="3_sltux"]
 [ext_resource type="Texture2D" uid="uid://wooxglouac4o" path="res://scenes/player/sprites/pop.png" id="4_uvfv6"]
+[ext_resource type="PackedScene" uid="uid://kprr5du0m6fd" path="res://scenes/components/health/health_component.tscn" id="4_xlx7n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fwek"]
 radius = 5.0
@@ -153,10 +154,17 @@ motion_mode = 1
 script = ExtResource("1_oyv21")
 player_death = ExtResource("2_sp5ny")
 
-[node name="VelocityComponent" parent="." instance=ExtResource("3_5d6r7")]
+[node name="Components" type="Node" parent="."]
+
+[node name="VelocityComponent" parent="Components" instance=ExtResource("3_5d6r7")]
 unique_name_in_owner = true
 max_speed = 95
 acceleration = 2.0
+
+[node name="HealthComponent" parent="Components" instance=ExtResource("4_xlx7n")]
+unique_name_in_owner = true
+health = 1
+max_health = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)

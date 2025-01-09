@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var hazard_area: Area2D = $Area2D
 @onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
 
+@export var damage: float = 1.0
+
 var _target_position: Vector2
 var _direction: Vector2
 var _is_paused: bool = false
@@ -51,5 +53,6 @@ func wake_up() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if "Player" in body.name:
-		SignalBus.emit_signal("player_popped")
+		var hc: HealthComponent = body.health_component
+		hc.remove_health(damage)
 	
