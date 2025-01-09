@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://tqicn2rmaf0s"]
+[gd_scene load_steps=4 format=3 uid="uid://tqicn2rmaf0s"]
 
 [ext_resource type="Script" path="res://scenes/hazards/base_hazard.gd" id="1_126rc"]
 [ext_resource type="AudioStream" uid="uid://cb8luxgt42fgf" path="res://scenes/hazards/sounds/item_throw_subtle.wav" id="2_hu7hf"]
+[ext_resource type="Script" path="res://scenes/components/velocity/velocity_component.gd" id="2_ys04t"]
 
 [node name="Hazard" type="CharacterBody2D"]
 scale = Vector2(1.15, 1.15)
 script = ExtResource("1_126rc")
+
+[node name="Components" type="Node" parent="."]
+
+[node name="VelocityComponent" type="Node" parent="Components"]
+unique_name_in_owner = true
+script = ExtResource("2_ys04t")
+
+[node name="LifespanTimer" type="Timer" parent="."]
+unique_name_in_owner = true
 
 [node name="Area2D" type="Area2D" parent="."]
 

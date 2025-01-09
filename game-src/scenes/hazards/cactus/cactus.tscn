@@ -16,7 +16,7 @@ hazard_properties = ExtResource("3_qshm8")
 position = Vector2(0.869565, -3.47826)
 shape = SubResource("CircleShape2D_yhovp")
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_hpl2d")
 region_enabled = true
 region_rect = Rect2(64, 0, 16, 21)

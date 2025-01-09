@@ -1,15 +1,24 @@
 class_name BaseHazard
 extends CharacterBody2D
 
-@export var hazard_properties: HazardPropertiesResource
+signal on_sleep(item: BaseHazard)
+
 @onready var hazard_area: Area2D = $Area2D
 @onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
+@onready var lifespan_timer: Timer = %LifespanTimer
 
+# Components
+@onready var velocity_component: VelocityComponent = %VelocityComponent
+
+
+@export_group("Stats")
 @export var damage: float = 1.0
+@export var hazard_properties: HazardPropertiesResource
+@export var lifespan: float = 6.0
 
 var _target_position: Vector2
 var _direction: Vector2
-var _is_paused: bool = false
+var is_sleeping: bool = true
 
 func _ready() -> void:
 	var target = get_tree().get_first_node_in_group("player") as Player
@@ -17,24 +26,27 @@ func _ready() -> void:
 	if not target:
 		return
 	
+	if hazard_properties:
+		velocity_component.acceleration = hazard_properties.base_speed
+	
 	hazard_area.connect("body_entered", _on_body_entered)
-	get_tree().create_timer(5.0).connect("timeout", _on_destroy)
+	lifespan_timer.wait_time = lifespan
+	lifespan_timer.timeout.connect(_on_destroy)
 		
 	
 func _physics_process(_delta: float) -> void:
-	if _is_paused:
+	if is_sleeping:
 		return
 		
 	rotation += hazard_properties.rotation_speed
-	move_and_slide()
+	#move_and_slide()
+	velocity_component.move(self)
 	
 	
 func _calculate_velocity() -> Vector2:
 	_target_position = PlayerTracker.get_last_position()
 	_direction = _target_position - global_position
-	print(self.name + " direction to player: ", _direction.normalized())
 	var target_velocity = _direction.normalized() * hazard_properties.base_speed
-	print(self.name + " target velocity: ", target_velocity)
 	return target_velocity
 	
 
@@ -42,17 +54,20 @@ func _on_destroy() -> void:
 	sleep()
 	
 func sleep() -> void:
-	_is_paused = true
+	is_sleeping = true
 	visible = false
 	
 func wake_up() -> void:
-	velocity = _calculate_velocity()
+	velocity_component.velocity = _calculate_velocity()
 	sfx_throw.play()
 	visible = true
-	_is_paused = false
+	is_sleeping = false
+	lifespan_timer.start()
 	
 func _on_body_entered(body: Node2D) -> void:
 	if "Player" in body.name:
 		var hc: HealthComponent = body.health_component
 		hc.remove_health(damage)
 	
+func _on_player_level_up(level: int) -> void:
+	pass

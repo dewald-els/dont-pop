@@ -11,15 +11,19 @@ const MIN_SPAWN_INTERVAL: float = 0.75
 @export var items: Array[PackedScene]
 @export var experience_manager: ExperienceManager
 
-
+var active_item: BaseHazard
 var hazards_pool: Array[BaseHazard] = []
-var base_speed_multiplier: float = 0.0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if experience_manager:
 		experience_manager.on_level_up.connect(_on_player_level_up)
+		
+	# Duplicate items
+	var cloned_items: Array[PackedScene] = items.duplicate()
+	for item in cloned_items:
+		items.append(item)
 		
 	for item in items:
 		var instance = item.instantiate() as BaseHazard
@@ -60,16 +64,17 @@ func _calculate_new_spawn_interval(new_player_level: int) -> float:
 	else:
 		return spawn_interval
 
-		
-func _calculate_new_base_speed_multiplier(new_player_level: int) -> float:
-	var new_base_speed = base_speed_multiplier + (new_player_level * 0.15)
-	return new_base_speed
-
 
 func on_spawn_timeout() -> void: 
 	if items and items.size() > 0:
 		var location: Vector2 = randomize_spawn_point()
-		var item: BaseHazard = hazards_pool.pick_random()
+		var item: BaseHazard = null
+		
+		while(item == null):
+			item = hazards_pool.pick_random() as BaseHazard
+			if not item.is_sleeping:
+				item = null
+				
 		item.global_position = location
 		item.wake_up()
 		spawn_timer.wait_time = spawn_interval
@@ -78,7 +83,4 @@ func on_spawn_timeout() -> void:
 	
 func _on_player_level_up(level: int) -> void:
 	spawn_interval = _calculate_new_spawn_interval(level)
-	base_speed_multiplier = _calculate_new_base_speed_multiplier(level)
-	for hazard in hazards_pool:
-		hazard.hazard_properties.base_speed += hazard.hazard_properties.base_speed * base_speed_multiplier
 	
