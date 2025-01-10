@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://boq4mqtg5gyhe"]
+
+[ext_resource type="Script" path="res://scenes/options/options_screen.gd" id="1_b5rpb"]
+[ext_resource type="Texture2D" uid="uid://c21ys13oh3bso" path="res://scenes/resources/tiles/sprite/tile.png" id="2_7fu1l"]
+[ext_resource type="FontFile" uid="uid://c73xqc05ocf2v" path="res://scenes/resources/fonts/PressStart2P-Regular.ttf" id="3_3mnd2"]
+[ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="4_xcmnc"]
+[ext_resource type="PackedScene" uid="uid://olkhhamwm1pr" path="res://scenes/ui/button/button.tscn" id="5_6eu1y"]
+
+[node name="OptionsScreen" type="CanvasLayer"]
+script = ExtResource("1_b5rpb")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(140.25, 89.25)
+scale = Vector2(9.73438, 6.54688)
+texture = ExtResource("2_7fu1l")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_3mnd2")
+theme_override_font_sizes/font_size = 12
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_xcmnc")
+theme_override_colors/font_outline_color = Color(0.227451, 0.164706, 0.188235, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_3mnd2")
+theme_override_font_sizes/font_size = 8
+text = "Work in progress..."
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 3
+
+[node name="BackButton" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("5_6eu1y")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Go Back"

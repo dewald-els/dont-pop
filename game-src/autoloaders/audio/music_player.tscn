@@ -9,7 +9,6 @@ process_mode = 3
 script = ExtResource("1_atyqt")
 game_song_stream = ExtResource("2_dfwdk")
 died_stream = ExtResource("3_tw3v7")
-enable_music = false
 
 [node name="StreamPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true

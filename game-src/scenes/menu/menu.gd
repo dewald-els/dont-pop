@@ -35,4 +35,4 @@ func show_high_scores() -> void:
 
 
 func _on_options_pressed() -> void:
-	pass
+	get_tree().change_scene_to_file("res://scenes/options/options_screen.tscn")
