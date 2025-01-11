@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://cryrbm8cnv12v" path="res://scenes/hazards/sprites/hazards.png" id="2_lojgy"]
 [ext_resource type="Resource" uid="uid://cjx4be0j00aac" path="res://scenes/hazards/tac/tac_properties.tres" id="2_lpwqp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_12pqg"]
-size = Vector2(2.6087, 7.82609)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gomxm"]
+radius = 2.6087
+height = 12.1739
 
 [node name="Tac" instance=ExtResource("1_ueckh")]
 hazard_properties = ExtResource("2_lpwqp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(-0.434783, 2.17391)
-shape = SubResource("RectangleShape2D_12pqg")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource("CapsuleShape2D_gomxm")
 
-[node name="Sprite2D" parent="." index="2"]
+[node name="Sprite2D" parent="." index="4"]
 texture = ExtResource("2_lojgy")
 region_enabled = true
 region_rect = Rect2(32, 0, 16, 21)

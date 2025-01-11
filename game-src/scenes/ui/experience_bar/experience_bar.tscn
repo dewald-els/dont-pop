@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://84k2rn8vw4pd"]
 
-[ext_resource type="Script" path="res://scenes/experience_bar/experience_bar.gd" id="1_tyoch"]
+[ext_resource type="Script" path="res://scenes/ui/experience_bar/experience_bar.gd" id="1_tyoch"]
 [ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="2_f4qga"]
 
 [node name="ExperienceBar" type="CanvasLayer"]

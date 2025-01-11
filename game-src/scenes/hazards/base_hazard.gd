@@ -2,8 +2,7 @@ class_name BaseHazard
 extends CharacterBody2D
 
 signal on_sleep(item: BaseHazard)
-
-@onready var hazard_area: Area2D = $Area2D
+@onready var hitbox: Area2D = %Hitbox
 @onready var sfx_throw: AudioStreamPlayer2D = %SfxThrow
 @onready var lifespan_timer: Timer = %LifespanTimer
 
@@ -28,8 +27,9 @@ func _ready() -> void:
 	
 	if hazard_properties:
 		velocity_component.acceleration = hazard_properties.base_speed
+		damage = hazard_properties.base_damage
 	
-	hazard_area.connect("body_entered", _on_body_entered)
+	hitbox.connect("body_entered", _on_body_entered)
 	lifespan_timer.wait_time = lifespan
 	lifespan_timer.timeout.connect(_on_destroy)
 		
@@ -39,7 +39,6 @@ func _physics_process(_delta: float) -> void:
 		return
 		
 	rotation += hazard_properties.rotation_speed
-	#move_and_slide()
 	velocity_component.move(self)
 	
 	
@@ -68,6 +67,3 @@ func _on_body_entered(body: Node2D) -> void:
 	if "Player" in body.name:
 		var hc: HealthComponent = body.health_component
 		hc.remove_health(damage)
-	
-func _on_player_level_up(level: int) -> void:
-	pass

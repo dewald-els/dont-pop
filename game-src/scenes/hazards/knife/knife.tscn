@@ -10,11 +10,11 @@ size = Vector2(3.47826, 11.3044)
 [node name="Knife" instance=ExtResource("1_do03o")]
 hazard_properties = ExtResource("2_dw0t1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(-0.869566, 3.91305)
 shape = SubResource("RectangleShape2D_m7ukx")
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="4"]
 texture = ExtResource("2_eorwk")
 region_enabled = true
 region_rect = Rect2(48, 0, 16, 21)

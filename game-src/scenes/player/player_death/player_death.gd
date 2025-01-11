@@ -22,4 +22,4 @@ func load_death_screen() -> void:
 
 
 func load_enter_high_score() -> void:
-	get_tree().change_scene_to_file("res://scenes/enter_high_score_screen/enter_high_score_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/enter_high_score_screen/enter_high_score_screen.tscn")

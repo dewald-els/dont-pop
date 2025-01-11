@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://0v36udjiei0g"]
 
-[ext_resource type="Script" path="res://scenes/enter_high_score_screen/enter_high_score_screen.gd" id="1_g2ybi"]
+[ext_resource type="Script" path="res://scenes/screens/enter_high_score_screen/enter_high_score_screen.gd" id="1_g2ybi"]
 [ext_resource type="Texture2D" uid="uid://c21ys13oh3bso" path="res://scenes/resources/tiles/sprite/tile.png" id="2_h2ece"]
-[ext_resource type="PackedScene" uid="uid://cesjt387n13kf" path="res://scenes/enter_high_score_screen/name_spinner/high_score_name_spinner.tscn" id="3_85gd2"]
+[ext_resource type="PackedScene" uid="uid://cesjt387n13kf" path="res://scenes/screens/enter_high_score_screen/name_spinner/high_score_name_spinner.tscn" id="3_85gd2"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="3_apbuj"]
 [ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="3_mm026"]
 [ext_resource type="PackedScene" uid="uid://ll2ljfri1nsi" path="res://scenes/environment/clouds/clouds.tscn" id="4_xt7pn"]

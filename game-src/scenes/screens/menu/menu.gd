@@ -31,8 +31,8 @@ func start_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
 
 func show_high_scores() -> void:
-	get_tree().change_scene_to_file("res://scenes/leaderboard/leaderboard_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/leaderboard/leaderboard_screen.tscn")
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/options/options_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/options/options_screen.tscn")

@@ -24,7 +24,7 @@ func start_game() -> void:
 	
 	
 func quit_game() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/menu/menu.tscn")
 
 
 func on_try_again_pressed() -> void:

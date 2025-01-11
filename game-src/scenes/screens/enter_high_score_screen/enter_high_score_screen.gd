@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	
 func _on_score_saved() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn") 
+	get_tree().change_scene_to_file("res://scenes/screens/menu/menu.tscn") 
 
 func _on_name_confirm(confirmed_name: String) -> void:
 	if saving:

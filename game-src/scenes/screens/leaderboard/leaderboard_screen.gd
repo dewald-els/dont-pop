@@ -31,7 +31,7 @@ func get_label_with_theme(score: String) -> Label:
 	return label
 
 func _load_menu() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/screens/menu/menu.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):

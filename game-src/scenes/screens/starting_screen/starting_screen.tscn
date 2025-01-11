@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwlhelf81ptdh"]
 
-[ext_resource type="Script" path="res://scenes/starting_screen/starting_screen.gd" id="1_1t5n3"]
+[ext_resource type="Script" path="res://scenes/screens/starting_screen/starting_screen.gd" id="1_1t5n3"]
 [ext_resource type="Theme" uid="uid://dotqp0rwr17pi" path="res://resources/theme.tres" id="1_4k1xv"]
 [ext_resource type="AudioStream" uid="uid://76fwpitwlu1i" path="res://scenes/audio/sounds/count_down.wav" id="2_snmf6"]
 

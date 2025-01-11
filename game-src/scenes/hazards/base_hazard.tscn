@@ -17,10 +17,11 @@ script = ExtResource("2_ys04t")
 [node name="LifespanTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="SfxThrow" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_hu7hf")
+
+[node name="Hitbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

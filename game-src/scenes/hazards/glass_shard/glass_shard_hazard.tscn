@@ -10,11 +10,11 @@ size = Vector2(6.08696, 13.0435)
 [node name="GlassShardHazard" instance=ExtResource("1_mdtpo")]
 hazard_properties = ExtResource("2_4sxrm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(-0.434783, 0.434782)
 shape = SubResource("RectangleShape2D_v47s2")
 
-[node name="Sprite2D" parent="." index="2"]
+[node name="Sprite2D" parent="." index="4"]
 texture = ExtResource("2_hqkuf")
 region_enabled = true
 region_rect = Rect2(3, 24, 9, 16)
