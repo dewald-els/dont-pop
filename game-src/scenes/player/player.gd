@@ -18,7 +18,6 @@ var base_speed: float = 0.0
 var is_dead: bool = false
 
 func _ready() -> void:
-	SignalBus.connect("player_popped", on_player_popped)
 	base_speed = velocity_component.max_speed
 	
 	if health_component:
@@ -65,6 +64,7 @@ func play_animation(direction: Vector2) -> void:
 			
 	
 func on_player_popped() -> void:
+	print("Popped")
 	var death: PlayerDeath = player_death.instantiate()
 	get_tree().root.add_child(death)
 	death.global_position = global_position

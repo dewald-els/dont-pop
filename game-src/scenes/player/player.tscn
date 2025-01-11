@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://du4y724ojgcem"]
+[gd_scene load_steps=29 format=3 uid="uid://du4y724ojgcem"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_oyv21"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="2_qs4dp"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://butsnj0v5sm43" path="res://scenes/player/sprites/move.png" id="3_sltux"]
 [ext_resource type="Texture2D" uid="uid://wooxglouac4o" path="res://scenes/player/sprites/pop.png" id="4_uvfv6"]
 [ext_resource type="PackedScene" uid="uid://kprr5du0m6fd" path="res://scenes/components/health/health_component.tscn" id="4_xlx7n"]
+[ext_resource type="PackedScene" uid="uid://wfwq1ni302c7" path="res://scenes/ui/health_bar/health_bar.tscn" id="8_k4dhg"]
+[ext_resource type="Texture2D" uid="uid://bcw13bmqnsl4c" path="res://scenes/ui/health_bar/sprites/heart.png" id="9_bsefu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fwek"]
 radius = 5.0
@@ -163,8 +165,8 @@ acceleration = 2.0
 
 [node name="HealthComponent" parent="Components" instance=ExtResource("4_xlx7n")]
 unique_name_in_owner = true
-health = 1
-max_health = 1
+health = 2
+max_health = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -175,3 +177,7 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_lhbr7")
 animation = &"pop"
 autoplay = "idle"
+
+[node name="HealthBar" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_k4dhg")]
+health_component = NodePath("../Components/HealthComponent")
+heart_texture = ExtResource("9_bsefu")

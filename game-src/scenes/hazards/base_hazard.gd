@@ -64,6 +64,9 @@ func wake_up() -> void:
 	lifespan_timer.start()
 	
 func _on_body_entered(body: Node2D) -> void:
+	print("body entered", body.name)
 	if "Player" in body.name:
 		var hc: HealthComponent = body.health_component
+		print("Player health: ", str(hc.health))
+		print("Damaging with: ", str(damage))
 		hc.remove_health(damage)
