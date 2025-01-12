@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://du4y724ojgcem"]
+[gd_scene load_steps=30 format=3 uid="uid://du4y724ojgcem"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_oyv21"]
 [ext_resource type="Texture2D" uid="uid://m2i2vu6d7bkh" path="res://scenes/player/sprites/idle.png" id="2_qs4dp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://butsnj0v5sm43" path="res://scenes/player/sprites/move.png" id="3_sltux"]
 [ext_resource type="Texture2D" uid="uid://wooxglouac4o" path="res://scenes/player/sprites/pop.png" id="4_uvfv6"]
 [ext_resource type="PackedScene" uid="uid://kprr5du0m6fd" path="res://scenes/components/health/health_component.tscn" id="4_xlx7n"]
+[ext_resource type="AudioStream" uid="uid://8uy4xnu0i7qx" path="res://assets/audio/hitHurt.wav" id="5_kr05w"]
 [ext_resource type="PackedScene" uid="uid://wfwq1ni302c7" path="res://scenes/ui/health_bar/health_bar.tscn" id="8_k4dhg"]
 [ext_resource type="Texture2D" uid="uid://bcw13bmqnsl4c" path="res://scenes/ui/health_bar/sprites/heart.png" id="9_bsefu"]
 
@@ -167,6 +168,7 @@ acceleration = 2.5
 unique_name_in_owner = true
 health = 3
 max_health = 3
+hurt_sound = ExtResource("5_kr05w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)

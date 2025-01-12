@@ -3,9 +3,11 @@ extends Node2D
 
 
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite
+@onready var death_sound_player: AudioStreamPlayer2D = %DeathSoundPlayer
 
 
 func _ready() -> void:
+	death_sound_player.play()
 	animated_sprite.animation_finished.connect(_on_finished)
 	
 func _on_finished() -> void:

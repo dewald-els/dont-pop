@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://r7x2ugu834fl"]
+[gd_scene load_steps=11 format=3 uid="uid://r7x2ugu834fl"]
 
 [ext_resource type="Texture2D" uid="uid://wooxglouac4o" path="res://scenes/player/sprites/pop.png" id="1_2h62l"]
 [ext_resource type="Script" path="res://scenes/player/player_death/player_death.gd" id="1_ln1ld"]
+[ext_resource type="AudioStream" uid="uid://c0oau2lpmsecr" path="res://assets/audio/death.wav" id="2_c0qd2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vm62x"]
 atlas = ExtResource("1_2h62l")
@@ -55,6 +56,10 @@ animations = [{
 
 [node name="PlayerDeath" type="Node2D"]
 script = ExtResource("1_ln1ld")
+
+[node name="DeathSoundPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_c0qd2")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

@@ -64,7 +64,6 @@ func play_animation(direction: Vector2) -> void:
 			
 	
 func on_player_popped() -> void:
-	print("Popped")
 	var death: PlayerDeath = player_death.instantiate()
 	get_tree().root.add_child(death)
 	death.global_position = global_position
