@@ -14,6 +14,7 @@ func _ready() -> void:
 		
 	_create_health_hearts(health_component.health)
 	health_component.health_lost.connect(_on_health_lost)
+	health_component.health_increased.connect(_on_health_increased)
 	
 	
 func _create_health_hearts(health: int) -> void:
@@ -22,6 +23,14 @@ func _create_health_hearts(health: int) -> void:
 		heart.texture = heart_texture
 		current_hearts.append(heart)
 		hearts_container_h_box.add_child(heart)
+
+func _on_health_increased(new_health: int) -> void:
+	current_hearts.clear()
+	
+	for child in hearts_container_h_box.get_children(): 
+		child.queue_free()
+	
+	_create_health_hearts(new_health)
 
 func _on_health_lost(health: int) -> void:
 	if health == 0:

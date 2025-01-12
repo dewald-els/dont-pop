@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ce8j4q71x7mpa"]
+[gd_scene load_steps=9 format=3 uid="uid://ce8j4q71x7mpa"]
 
 [ext_resource type="Script" path="res://scenes/main/Spawner.gd" id="1_knav6"]
 [ext_resource type="PackedScene" uid="uid://q1ow27yuxuw5" path="res://scenes/hazards/needle/needle.tscn" id="2_ybjav"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://tb80yymqugnr" path="res://scenes/hazards/cactus/cactus.tscn" id="5_vbh8i"]
 [ext_resource type="PackedScene" uid="uid://c18cqf5p0osk7" path="res://scenes/hazards/tac/tac.tscn" id="6_co4tq"]
 [ext_resource type="PackedScene" uid="uid://cyaru32e354ir" path="res://scenes/hazards/glass_shard/glass_shard_hazard.tscn" id="7_ck0k8"]
+[ext_resource type="Script" path="res://scenes/ui/label/game_label.gd" id="8_r8spd"]
 
 [node name="HazardSpawner" type="Node2D"]
 script = ExtResource("1_knav6")
@@ -16,3 +17,23 @@ items = Array[PackedScene]([ExtResource("2_ybjav"), ExtResource("3_ck0vv"), ExtR
 [node name="SpawnTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="SpawnDebugLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Spawn timeout: 0"
+script = ExtResource("8_r8spd")

@@ -160,13 +160,13 @@ player_death = ExtResource("2_sp5ny")
 
 [node name="VelocityComponent" parent="Components" instance=ExtResource("3_5d6r7")]
 unique_name_in_owner = true
-max_speed = 95
-acceleration = 2.0
+max_speed = 105
+acceleration = 2.5
 
 [node name="HealthComponent" parent="Components" instance=ExtResource("4_xlx7n")]
 unique_name_in_owner = true
-health = 2
-max_health = 2
+health = 3
+max_health = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)

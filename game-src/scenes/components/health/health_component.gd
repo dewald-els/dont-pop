@@ -5,12 +5,9 @@ signal health_depleated
 signal health_lost(health: int)
 signal health_increased(health: int)
 
-
 @export var health: int
 @export var max_health: int
 
-func _ready() -> void:
-	print("Health", health)
 
 func add_max_health(amount: int) -> void:
 	max_health += amount

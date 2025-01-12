@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dthjfe3p2yst4"]
+
+[ext_resource type="Script" path="res://scenes/spawners/heart_spawner/heart_spawner.gd" id="1_ieded"]
+[ext_resource type="PackedScene" uid="uid://n4olm2snaall" path="res://scenes/pickups/heart_pickup/heart_pickup.tscn" id="2_fum66"]
+
+[node name="HeartSpawner" type="Node2D"]
+script = ExtResource("1_ieded")
+enable_debug = true
+minimum_spawn_time = 10.0
+maximum_spawn_time = 20.0
+heart_pickup_scene = ExtResource("2_fum66")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 15.0
+one_shot = true
+
+[node name="DebugLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 107.0
+offset_top = 153.0
+offset_right = 165.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 6
+text = "Testing some text...."
